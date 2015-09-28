@@ -4,7 +4,7 @@
  * Timny 0.6
  * tiny php framework
  * Hamid Reza Samak
- * https://github.com/hamidsamak/Timny
+ * https://github.com/hamidsamak/timny
  */
 
 // constatns
@@ -179,6 +179,8 @@ class Timny {
 					unset($file);
 				}
 			
+			header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
+
 			$this->title = ERROR;
 			$this->content = PAGE_NOT_FOUND;
 		}

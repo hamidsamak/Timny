@@ -29,7 +29,7 @@
 
 <div class="fix">
 	<div id="footer">
-		<a href="https://github.com/hamidsamak/Timny" target="_blank">Timny 0.6</a> &copy; 2012 - <i>page generated in {round(microtime(true) - $GLOBALS['start'], 5)} seconds</i>
+		<a href="https://github.com/hamidsamak/timny" target="_blank">Timny 0.6</a> &copy; 2012 - <i>page generated in {round(microtime(true) - $GLOBALS['start'], 5)} seconds</i>
 	</div>
 </div>
 </body>
