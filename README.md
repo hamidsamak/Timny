@@ -1,3 +1,6 @@
 Timny
+=======
+tiny php framework
+-------
 
-A 6kb php framework for creating projects easier and faster.
+Timny is a lightweight php framework. A 10kb framework to create web pages easier and view in structured addresses.
