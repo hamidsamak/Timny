@@ -19,6 +19,7 @@ define('INITIALIZE', PATH . '/misc/init.php'); // initialize file path
 define('TEMPLATE', PATH . '/misc/template.tpl'); // template file path
 define('GLOBAL_FILE', 'global'); // global file name
 define('EXTS_AUTO_LOAD', true); // automatic inclusion for files inside exts directory
+define('TIMEZONE', 'UTC'); // default time zone
 
 // 404 Error
 define('ERROR', 'Error'); // error title
@@ -217,6 +218,8 @@ if (EXTS_AUTO_LOAD === true)
 	$timny->load_exts();
 
 $timny->parse_url(@$_GET['q']);
+
+date_default_timezone_set(TIMEZONE);
 
 if (file_exists(INITIALIZE))
 	require_once INITIALIZE;
