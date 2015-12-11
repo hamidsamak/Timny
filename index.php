@@ -16,7 +16,8 @@ define('TITLE', 'Timny'); // defualt pages title
 define('DIRECTION', 'ltr'); // default pages direction
 define('EXTENSIONS', 'php,inc'); // extension types (seperate with comma)
 define('INITIALIZE', PATH . '/misc/init.php'); // initialize file path
-define('TEMPLATE', PATH . '/misc/template.tpl'); // template file path
+define('INDEX_TEMPLATE', PATH . '/misc/index.tpl'); // index template file path
+define('PAGE_TEMPLATE', PATH . '/misc/page.tpl'); // page template file path
 define('GLOBAL_FILE', 'global'); // global file name
 define('EXTS_AUTO_LOAD', true); // automatic inclusion for files inside exts directory
 define('TIMEZONE', 'UTC'); // default time zone
@@ -193,8 +194,13 @@ class Timny {
 	}
 	
 	public function template() {
-		if (file_exists(TEMPLATE)) {
-			$template = $this->parse_tpl(TEMPLATE, array('php'));
+		if ((count($this->query) > 1 || $this->query[0] != 'default') && file_exists(PAGE_TEMPLATE))
+			$template_file = PAGE_TEMPLATE;
+		else
+			$template_file = INDEX_TEMPLATE;
+
+		if (file_exists($template_file)) {
+			$template = $this->parse_tpl($template_file, array('php'));
 			
 			if (isset($template['php']))
 				eval($template['php']);
