@@ -231,6 +231,7 @@ if (file_exists(INITIALIZE))
 	require_once INITIALIZE;
 
 $timny->load_file();
+
 print $timny->template();
 
 ?>
