@@ -223,7 +223,7 @@ $timny = new Timny;
 if (EXTS_AUTO_LOAD === true)
 	$timny->load_exts();
 
-$timny->parse_url(@$_GET['q']);
+$timny->parse_url(isset($_GET['q']) ? $_GET['q'] : null);
 
 date_default_timezone_set(TIMEZONE);
 
