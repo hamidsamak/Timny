@@ -8,6 +8,7 @@
  */
 
 // constatns
+define('DS', DIRECTORY_SEPARATOR);
 define('PATH', str_replace('\\', '/', dirname(__FILE__)));
 define('BASE', str_replace($_SERVER['DOCUMENT_ROOT'], '', PATH));
 
@@ -15,9 +16,9 @@ define('BASE', str_replace($_SERVER['DOCUMENT_ROOT'], '', PATH));
 define('TITLE', 'Timny'); // defualt pages title
 define('DIRECTION', 'ltr'); // default pages direction
 define('EXTENSIONS', 'php,inc'); // extension types (seperate with comma)
-define('INITIALIZE', PATH . '/misc/init.php'); // initialize file path
-define('INDEX_TEMPLATE', PATH . '/misc/index.tpl'); // index template file path
-define('PAGE_TEMPLATE', PATH . '/misc/page.tpl'); // page template file path
+define('INITIALIZE', PATH . DS . 'misc' . DS . 'init.php'); // initialize file path
+define('INDEX_TEMPLATE', PATH . DS . 'misc' . DS . 'index.tpl'); // index template file path
+define('PAGE_TEMPLATE', PATH . DS . 'misc' . DS . 'page.tpl'); // page template file path
 define('GLOBAL_FILE', 'global'); // global file name
 define('EXTS_AUTO_LOAD', true); // automatic inclusion for files inside exts directory
 define('TIMEZONE', 'UTC'); // default time zone
@@ -36,14 +37,14 @@ class Timny {
 	public $direction = DIRECTION;
 	
 	public function load_exts() {
-		if (file_exists(PATH . '/exts') && is_dir(PATH . '/exts')) {
+		if (file_exists(PATH . DS . 'exts') && is_dir(PATH . DS . 'exts')) {
 			$exts = explode(',', EXTENSIONS);
-			$files = scandir(PATH . '/exts');
+			$files = scandir(PATH . DS . 'exts');
 			asort($files);
 			
 			foreach ($files as $file)
 				if (in_array(substr($file, strrpos($file, '.') + 1), $exts))
-					require_once PATH . '/exts/' . $file;
+					require_once PATH . DS . 'exts' . DS . $file;
 			
 			return true;
 		}
@@ -59,10 +60,10 @@ class Timny {
 				unset($query[$key]);
 		
 		$query = array_values($query);
-		$this->file = PATH . '/data/' . implode('/', $query);
+		$this->file = PATH . DS . 'data' . DS . implode('/', $query);
 
 		if (is_dir($this->file)) {
-			$this->file .= '/default';
+			$this->file .= DS . 'default';
 			$query[count($query)] = 'default';
 		}
 		
@@ -172,7 +173,7 @@ class Timny {
 					if (isset($file))
 						$file = implode($file, '/') . '/';
 					
-					$file = PATH . '/data/' . @$file . GLOBAL_FILE;
+					$file = PATH . DS . 'data' . DS . @$file . GLOBAL_FILE;
 					if (file_exists($file . '.tpl') || file_exists($file . '.php')) {
 						$this->file = $file;
 						return $this->load_file();
