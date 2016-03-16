@@ -165,8 +165,7 @@ class Timny {
 		} else {
 			$count = count($this->query);
 			if ($count > 0)
-				for ($i = $count; $i > 0; $i--)
-				{
+				for ($i = $count; $i > 0; $i--) {
 					for ($j = 0; $j < $i - 1; $j++)
 						$file[] = $this->query[$j];
 					
