@@ -170,9 +170,9 @@ class Timny {
 					for ($j = 0; $j < $i - 1; $j++)
 						$file[] = $this->query[$j];
 					
-					$file = isset($file) ? implode($file, '/') . '/' : null;
+					$file = isset($file) ? implode('/', $file) . '/' : null;
 					$file = PATH . DS . 'data' . DS . $file . GLOBAL_FILE;
-					
+
 					if (file_exists($file . '.tpl') || file_exists($file . '.php')) {
 						$this->file = $file;
 						return $this->load_file();
