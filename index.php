@@ -181,7 +181,7 @@ class Timny {
 					unset($file);
 				}
 			
-			header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found');
+			header($_SERVER['SERVER_PROTOCOL'] . ' 404 Not Found', true, 404);
 
 			$this->title = ERROR;
 			$this->content = PAGE_NOT_FOUND;
