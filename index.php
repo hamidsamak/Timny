@@ -67,7 +67,7 @@ class Timny {
 			$query[count($query)] = 'default';
 		}
 		
-		$this->query = $query;
+		$this->query = array_map('htmlspecialchars', $query);
 		
 		return true;
 	}
