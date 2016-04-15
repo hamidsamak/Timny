@@ -1,0 +1,19 @@
+{
+	"name": "hamidsamak/timny",
+	"type": "project",
+	"description": "tiny php framework",
+	"keywords": ["framework"],
+	"homepage": "https://github.com/hamidsamak/timny",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Hamid Samak",
+			"email": "me@hamidsamak.ir",
+			"homepage": "http://hamidsamak.ir",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	}
+}
