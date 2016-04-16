@@ -2,7 +2,7 @@
 	"name": "hamidsamak/timny",
 	"type": "project",
 	"description": "tiny php framework",
-	"keywords": ["framework"],
+	"keywords": ["timny", "tiny", "php", "framework"],
 	"homepage": "https://github.com/hamidsamak/timny",
 	"license": "MIT",
 	"authors": [
