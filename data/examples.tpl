@@ -67,10 +67,8 @@ $this-&gt;content = 'Today is: ' . $today;
 <pre>
 &lt;?php
 
-class Test
-&#123;
-	function get_time()
-	&#123;
+class Test &#123;
+	function get_time() &#123;
 		return time();
 	&#125;
 &#125;
@@ -82,10 +80,10 @@ class Test
 
 <pre>
 &lt;php&gt;
-$class['test'] = new Test;
+$test = new Test();
 &lt;/php&gt;
 
-&#123;$class['test']-&gt;get_time()&#125;
+&#123;$test-&gt;get_time()&#125;
 </pre>
 
 <b>or (my-file.php):</b>
@@ -93,8 +91,8 @@ $class['test'] = new Test;
 <pre>
 &lt;?php
 
-$class['test'] = new Test;
-$this->content = $class['test']-&gt;get_time();
+$test = new Test();
+$this->content = $test-&gt;get_time();
 
 ?&gt;
 </pre>
