@@ -187,7 +187,7 @@ class Timny {
 			$this->content = PAGE_NOT_FOUND;
 		}
 		
-		$this->title = empty($this->title) ? TITLE : TITLE . ' - ' . $this->title;
+		$this->title = empty($this->title) ? TITLE : $this->title;
 		
 		return true;
 	}
