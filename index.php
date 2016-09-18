@@ -56,7 +56,7 @@ class Timny {
 		$query = empty($query) ? array('default') : explode('/', str_replace('\\', '', $query));
 		
 		foreach ($query as $key => $value)
-			if (substr($value, 0, 1) === '.')
+			if (substr($value, 0, 1) === '.' || empty($value))
 				unset($query[$key]);
 		
 		$query = array_values($query);
