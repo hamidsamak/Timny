@@ -193,7 +193,9 @@ class Timny {
 	}
 	
 	public function template() {
-		if ((count($this->query) > 1 || $this->query[0] != 'default') && file_exists(PAGE_TEMPLATE))
+		if (isset($this->template) && empty($this->template) === false)
+			$template_file = $this->template;
+		else if ((count($this->query) > 1 || $this->query[0] != 'default') && file_exists(PAGE_TEMPLATE))
 			$template_file = PAGE_TEMPLATE;
 		else
 			$template_file = INDEX_TEMPLATE;
