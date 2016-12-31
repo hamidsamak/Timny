@@ -213,7 +213,8 @@ class Timny {
 				$this->head .= '<link rel="stylesheet" type="text/css" href="' . BASE . '/data/' . implode('/', $this->query) . '.css" />';
 			
 			return eval('return \'' . $template['content'] . '\';');
-		}
+		} else
+			die('<b>Timny error:</b> template missing "' . $template_file . '"');
 		
 		return false;
 	}
