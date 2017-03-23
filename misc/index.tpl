@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="{$this->direction}">
+<html dir="{$this->direction}" lang="{$this->langcode}">
 <head>
 <title>{$this->title}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">

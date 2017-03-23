@@ -14,6 +14,7 @@ define('BASE', str_replace($_SERVER['DOCUMENT_ROOT'], '', PATH));
 
 // configuration
 define('TITLE', 'Timny'); // defualt pages title
+define('LANGCODE', 'en'); // default langauge iso-639-1 code
 define('DIRECTION', 'ltr'); // default pages direction
 define('EXTENSIONS', 'php,inc'); // extension types (seperate with comma)
 define('INITIALIZE', PATH . DS . 'misc' . DS . 'init.php'); // initialize file path
@@ -34,6 +35,7 @@ class Timny {
 	
 	public $head;
 	public $title;
+	public $langcode = LANGCODE;
 	public $direction = DIRECTION;
 	
 	public function load_exts() {
