@@ -2,8 +2,8 @@
 <html dir="{$this->direction}">
 <head>
 <title>{$this->title}</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="{BASE}/misc/style.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="{BASE}/misc/style.css">
 {$this->head}</head>
 <body>
 <div id="header">

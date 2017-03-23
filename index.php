@@ -210,7 +210,7 @@ class Timny {
 				$this->head .= '<script type="text/javascript" src="' . BASE . '/data/' . implode('/', $this->query) . '.js"></script>';
 			
 			if (file_exists($this->file . '.css'))
-				$this->head .= '<link rel="stylesheet" type="text/css" href="' . BASE . '/data/' . implode('/', $this->query) . '.css" />';
+				$this->head .= '<link rel="stylesheet" type="text/css" href="' . BASE . '/data/' . implode('/', $this->query) . '.css">';
 			
 			return eval('return \'' . $template['content'] . '\';');
 		} else
