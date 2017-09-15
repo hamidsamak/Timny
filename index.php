@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Timny 0.6
+ * Timny 0.7
  * tiny php framework
  * Hamid Reza Samak
  * https://github.com/hamidsamak/timny

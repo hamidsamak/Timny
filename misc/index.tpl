@@ -28,7 +28,7 @@
 
 	<footer>
 		<div class="container">
-			<a href="https://github.com/hamidsamak/timny" target="_blank">Timny 0.6</a> &copy; {date('Y')} - <i>page generated in {round(microtime(true) - $GLOBALS['start'], 5)} seconds</i>
+			<a href="https://github.com/hamidsamak/timny" target="_blank">Timny 0.7</a> &copy; {date('Y')} - <i>page generated in {round(microtime(true) - $GLOBALS['start'], 5)} seconds</i>
 		</div>
 	</footer>
 
